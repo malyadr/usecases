@@ -1,5 +1,5 @@
 provider "google" {
-    credentials = file("/home/malyadm/Downloads/malyadri-410908-2a80269003ae.json")
+    credentials = file("path of the service account json file")
     project = var.gcp_project_id
     region = var.gcp_region
 }

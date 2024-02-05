@@ -12,7 +12,25 @@ module "gke" {
   network_policy             = false
   horizontal_pod_autoscaling = true
 
-  node_pools = var.node_pools
+  node_pools = [
+    {
+      name                      = var.gke_default_nodepool_name
+      machine_type              = var.machine_type
+      min_count                 = var.min_count
+      max_count                 = var.max_count
+      spot                      = false
+      disk_size_gb              = var.disk_size_gb
+      disk_type                 = var.disk_type
+      image_type                = var.image_type
+      enable_gcfs               = false
+      enable_gvnic              = false
+      auto_repair               = true
+      auto_upgrade              = true
+      service_account           = var.gke_service_account
+      preemptible               = true
+      initial_node_count        = 1
+    },
+  ]
 
   node_pools_oauth_scopes = {
     all = [
