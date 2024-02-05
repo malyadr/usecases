@@ -1,0 +1,5 @@
+gcp_project_id = "malyadri-410908"
+gcp_region = "us-central1"
+gke_cluster_name = "gke-cluster-terraform"
+network = "test-vpc"
+subnetwork = "gke-subnet"
