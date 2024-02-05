@@ -8,7 +8,7 @@ module "gke" {
   zones                      = var.gcp_zones
   network                    = var.network
   subnetwork                 = var.subnetwork
-  http_load_balancing        = false
+  http_load_balancing        = true
   network_policy             = false
   horizontal_pod_autoscaling = true
 
