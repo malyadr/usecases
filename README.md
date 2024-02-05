@@ -1,6 +1,6 @@
 ### use case -1 ###
 
-use case -1 : terraform files and start script was available in usecase-1 branch 
+use case -1 : terraform files and start-up script was available in usecase-1 branch 
 
 ### use case -2 ###
 
