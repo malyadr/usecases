@@ -26,6 +26,7 @@ pipeline {
     stage('Terraform init') {
       steps {
         container('terraform') {
+          sh 'cd terraform'
           sh "terraform init"
         }
       }
@@ -34,6 +35,7 @@ pipeline {
     stage('Terraform plan') {
       steps {
         container('terraform') {
+          sh 'cd terraform'
           sh "terraform plan"
         }
       }
@@ -42,6 +44,7 @@ pipeline {
     stage('Terraform apply') {
       steps {
         container('terraform') {
+          sh 'cd terraform'
           sh "terraform apply --auto-approve"
         }
       }
