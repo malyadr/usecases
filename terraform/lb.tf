@@ -13,20 +13,20 @@ module "gce-lb-http" {
   backends = {
     default = {
 
-      protocol    = "HTTP"
-      port        = 80
-      port_name   = "http"
-      timeout_sec = 10
-      enable_cdn  = false
+      protocol    = var.network_protocol
+      port        = var.network_port
+      port_name   = var.network_port_name
+      timeout_sec = var.network_timeout_sec
+      enable_cdn  = var.network_enable_cdn
 
       health_check = {
-        request_path = "/"
-        port         = 80
+        request_path = var.health_check_request_path
+        port         = var.health_check_port
       }
 
       log_config = {
-        enable      = true
-        sample_rate = 1.0
+        enable      = var.enable_logging
+        sample_rate = var.log_sampling_rate
       }
 
       groups = [
@@ -39,7 +39,7 @@ module "gce-lb-http" {
       ]
 
       iap_config = {
-        enable = false
+        enable = var.iap_enable
       }
     }
   }
