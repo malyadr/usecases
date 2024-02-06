@@ -1,7 +1,8 @@
-hostname       = "myvm"
-mig_region     = "us-central1"
-mig_project_id = "samad-410909"
-mig_name       = "mymig1"
+hostname                    = "myvm"
+mig_region                  = "us-central1"
+mig_project_id              = "samad-410909"
+mig_name                    = "mymig1"
+instance_template_self_link = "https://www.googleapis.com/compute/v1/projects/samad-410909/global/instanceTemplates/linux-vm-20240206084449516100000001"
 health_check = {
   type                = "http"
   initial_delay_sec   = 60

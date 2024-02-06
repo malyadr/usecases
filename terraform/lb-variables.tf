@@ -57,3 +57,13 @@ variable "iap_enable" {
   type    = bool
   default = false
 }
+
+variable "firewall_networks" {
+  type    = list(string)
+  default = ["vpc-dev"]
+}
+
+variable "instance_group" {
+  type    = string
+  default = "https://www.googleapis.com/compute/v1/projects/samad-410909/regions/us-central1/instanceGroups/mymig"
+}
